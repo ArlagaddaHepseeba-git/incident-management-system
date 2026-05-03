@@ -1,0 +1,19 @@
+{
+	  "incidents": [
+		      {
+			            "title": "RDBMS Outage",
+				          "component": "RDBMS",
+					        "severity": "P0"
+						    },
+						        {
+								      "title": "Cache Failure",
+								            "component": "CACHE_CLUSTER_01",
+									          "severity": "P2"
+										      },
+										          {
+												        "title": "MCP Host Down",
+													      "component": "MCP_HOST",
+													            "severity": "P1"
+														        }
+															  ]
+}
