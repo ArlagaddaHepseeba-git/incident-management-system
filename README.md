@@ -17,7 +17,7 @@ https://github.com/ArlagaddaHepseeba-git/incident-management-system
 └─────────────────────────────────────────────────────────────────────┘
 
   1. INGESTION LAYER
-  ┌──────────────────────┐
+  ┌──────────────────────┐lll
   │  Error Signals       │
   │  (APIs, Cache, DB,   │──────────────────────────────────────────┐
   │   MCP, Queues)       │                                          │
