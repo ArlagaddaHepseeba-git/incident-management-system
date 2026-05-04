@@ -71,32 +71,11 @@ https://github.com/ArlagaddaHepseeba-git/incident-management-system
 The dashboard shows live incidents sorted by severity with full RCA form:
 
 ```
-┌─────────────────────────────────────────┐
-│  🚨 Incident Management System          │
-│                                         │
-│  Active Incidents                       │
-│  ┌─────────────────────────────────┐    │
-│  │ DB Outage | P0 | OPEN           │    │
-│  └─────────────────────────────────┘    │
-│                                         │
-│  ┌─────────────────────────────────┐    │
-│  │ Incident Detail                 │    │
-│  │ Title: DB Outage                │    │
-│  │ Component: RDBMS                │    │
-│  │ Severity: P0                    │    │
-│  │ Status: OPEN                    │    │
-│  │                                 │    │
-│  │ RCA Form                        │    │
-│  │ Root Cause: [Dropdown ▼]        │    │
-│  │ Fix Applied: [Text Area]        │    │
-│  │ Prevention: [Text Area]         │    │
-│  │ [Close Incident]                │    │
-│  └─────────────────────────────────┘    │
-└─────────────────────────────────────────┘
+
+
+<img width="1920" height="1080" alt="latest output" src="https://github.com/user-attachments/assets/0db1df1d-01d3-403c-b3aa-f0a8c7fae566"/>
 
 ---
-
-<img width="1920" height="1080" alt="latest output" src="https://github.com/user-attachments/assets/0db1df1d-01d3-403c-b3aa-f0a8c7fae566" />
 
 
 ## 🛠️ Tech Stack
