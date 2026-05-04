@@ -1,15 +1,20 @@
 # 🚨 Incident Management System (IMS)
 
 > A resilient, production-grade Incident Management System designed to monitor a distributed stack and manage failure mediation workflows.
+# Create P0 DB Outage
+curl -X POST http://localhost:8000/incidents \
+-H "Content-Type: application/json" \
+-d '{"title":"RDBMS Outage","component":"RDBMS","severity":"P0"}'
 
-## 🔗 GitHub Repository
-```
-https://github.com/ArlagaddaHepseeba-git/incident-management-system
-```
+# Create P1 MCP Failure
+curl -X POST http://localhost:8000/incidents \
+-H "Content-Type: application/json" \
+-d '{"title":"MCP Host Down","component":"MCP_HOST","severity":"P1"}'
 
----
-
-## 🏗️ Architecture Diagram
+# Create P2 Cache Failure
+curl -X POST http://localhost:8000/incidents \
+-H "Content-Type: application/json" \
+-d '{"title":"Cache Failure","component":"CACHE_CLUSTER_01","severity":"P2"}'
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
