@@ -1,20 +1,15 @@
 # 🚨 Incident Management System (IMS)
 
 > A resilient, production-grade Incident Management System designed to monitor a distributed stack and manage failure mediation workflows.
-# Create P0 DB Outage
-curl -X POST http://localhost:8000/incidents \
--H "Content-Type: application/json" \
--d '{"title":"RDBMS Outage","component":"RDBMS","severity":"P0"}'
 
-# Create P1 MCP Failure
-curl -X POST http://localhost:8000/incidents \
--H "Content-Type: application/json" \
--d '{"title":"MCP Host Down","component":"MCP_HOST","severity":"P1"}'
+## 🔗 GitHub Repository
+```
+https://github.com/ArlagaddaHepseeba-git/incident-management-system
+```
 
-# Create P2 Cache Failure
-curl -X POST http://localhost:8000/incidents \
--H "Content-Type: application/json" \
--d '{"title":"Cache Failure","component":"CACHE_CLUSTER_01","severity":"P2"}'
+---
+
+## 🏗️ Architecture Diagram
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -22,7 +17,7 @@ curl -X POST http://localhost:8000/incidents \
 └─────────────────────────────────────────────────────────────────────┘
 
   1. INGESTION LAYER
-  ┌──────────────────────┐lll
+  ┌──────────────────────┐
   │  Error Signals       │
   │  (APIs, Cache, DB,   │──────────────────────────────────────────┐
   │   MCP, Queues)       │                                          │
@@ -46,7 +41,14 @@ curl -X POST http://localhost:8000/incidents \
   │ Raw Signals │  │ Work Items  │  │ Real-time Dashboard  │
   │ Audit Log   │  │ RCA Records │  │ State (Hot Path)     │
   │ NoSQL Store │  │ RDBMS       │  │ In-memory Buffer     │
-  └─────────────┘  └─────────────┘  └──────────
+  └─────────────┘  └─────────────┘  └─────────────────────┘
+                                    
+  4. WORKFLOW ENGINE
+  ┌──────────────────────────────────────────────┐
+  │  Incident Lifecycle (State Pattern)          │
+  │                                              │
+  │  OPEN ──► INVESTIGATING ──► RESOLVED ──► CLOSED │
+  │                                    (RCA Required)│
   └──────────────────────────────────────────────┘
 
   5. VISUALIZATION LAYER
@@ -69,7 +71,32 @@ curl -X POST http://localhost:8000/incidents \
 The dashboard shows live incidents sorted by severity with full RCA form:
 
 ```
+┌─────────────────────────────────────────┐
+│  🚨 Incident Management System          │
+│                                         │
+│  Active Incidents                       │
+│  ┌─────────────────────────────────┐    │
+│  │ DB Outage | P0 | OPEN           │    │
+│  └─────────────────────────────────┘    │
+│                                         │
+│  ┌─────────────────────────────────┐    │
+│  │ Incident Detail                 │    │
+│  │ Title: DB Outage                │    │
+│  │ Component: RDBMS                │    │
+│  │ Severity: P0                    │    │
+│  │ Status: OPEN                    │    │
+│  │                                 │    │
+│  │ RCA Form                        │    │
+│  │ Root Cause: [Dropdown ▼]        │    │
+│  │ Fix Applied: [Text Area]        │    │
+│  │ Prevention: [Text Area]         │    │
+│  │ [Close Incident]                │    │
+│  └─────────────────────────────────┘    │
+└─────────────────────────────────────────┘
+```
+
 ---
+
 ## 🛠️ Tech Stack
 
 | Layer | Technology | Purpose |
@@ -84,7 +111,7 @@ The dashboard shows live incidents sorted by severity with full RCA form:
 
 ---
 
-## ✨ Features remove
+## ✨ Features
 
 - ✅ High-throughput signal ingestion API
 - ✅ Rate limiting (100 requests/minute) to prevent cascading failures
@@ -236,10 +263,7 @@ incident-management-system/
 ├── sample-data.json      # Sample failure events
 └── README.md
 ```
-```
 
-<img width="1920" height="1080" alt="latest output" src="https://github.com/user-attachments/assets/0db1df1d-01d3-403c-b3aa-f0a8c7fae566"/>
-```
 ---
 
 ## 👩‍💻 Submitted by
