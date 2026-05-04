@@ -71,13 +71,13 @@ https://github.com/ArlagaddaHepseeba-git/incident-management-system
 The dashboard shows live incidents sorted by severity with full RCA form:
 
 ```
-
+---
 
 <img width="1920" height="1080" alt="latest output" src="https://github.com/user-attachments/assets/0db1df1d-01d3-403c-b3aa-f0a8c7fae566"/>
 
 ---
 
-
+---
 ## 🛠️ Tech Stack
 
 | Layer | Technology | Purpose |
