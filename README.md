@@ -79,7 +79,7 @@ The dashboard shows live incidents sorted by severity with full RCA form:
 
 ---
 
-## ✨ Features
+## ✨ Features remove
 
 - ✅ High-throughput signal ingestion API
 - ✅ Rate limiting (100 requests/minute) to prevent cascading failures
