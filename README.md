@@ -41,14 +41,7 @@ https://github.com/ArlagaddaHepseeba-git/incident-management-system
   │ Raw Signals │  │ Work Items  │  │ Real-time Dashboard  │
   │ Audit Log   │  │ RCA Records │  │ State (Hot Path)     │
   │ NoSQL Store │  │ RDBMS       │  │ In-memory Buffer     │
-  └─────────────┘  └─────────────┘  └─────────────────────┘
-                                    
-  4. WORKFLOW ENGINE
-  ┌──────────────────────────────────────────────┐
-  │  Incident Lifecycle (State Pattern)          │
-  │                                              │
-  │  OPEN ──► INVESTIGATING ──► RESOLVED ──► CLOSED │
-  │                                    (RCA Required)│
+  └─────────────┘  └─────────────┘  └──────────
   └──────────────────────────────────────────────┘
 
   5. VISUALIZATION LAYER
