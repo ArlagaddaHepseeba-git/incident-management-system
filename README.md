@@ -94,7 +94,7 @@ The dashboard shows live incidents sorted by severity with full RCA form:
 │  └─────────────────────────────────┘    │
 └─────────────────────────────────────────┘
 
-<img width="1920" height="1080" alt="latest output" src="https://github.com/user-attachments/assets/596b924e-4a4d-4fb7-9a00-e92a46af0e9f" />
+<img width="1920" height="1080" alt="latest output" src="https://github.com/user-attachments/assets/596b924e-4a4d-4fb7-9a00-e92a46af0e9f"/>
 
 
 ---
