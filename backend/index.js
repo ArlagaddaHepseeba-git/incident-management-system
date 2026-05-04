@@ -1,10 +1,15 @@
 const fastify = require('fastify')({ logger: true })
 const cors = require('@fastify/cors')
+const rateLimit = require('@fastify/rate-limit')
 const mongoose = require('mongoose')
 const redis = require('redis')
 const incidentRoutes = require('./routes/incidents')
 
 fastify.register(cors)
+fastify.register(rateLimit, {
+  max: 100,
+  timeWindow: '1 minute'
+})
 fastify.register(incidentRoutes)
 
 mongoose.connect('mongodb://127.0.0.1:27017/incidents')
